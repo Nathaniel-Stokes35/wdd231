@@ -132,7 +132,7 @@ section {
 .status {
     font-size: 0.8em;
     margin-left: 0.5em;
-    color: red;
+    color: #800000;
 }
 button.active .status {
     color: green;
