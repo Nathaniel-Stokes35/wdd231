@@ -85,7 +85,6 @@ const csebtn = document.querySelector('#cse-btn');
 const wddbtn = document.querySelector('#wdd-btn');
 const daybtn = document.querySelector('#day-btn');
 const compCont = document.querySelector('#comp-container');
-const secCont = document.querySelector('#sec-container');
 const yearCont = document.querySelector('#curr-year');
 const modCont = document.querySelector('#last-mod');
 
