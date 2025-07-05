@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="styles/example-base.css">
         <link rel="stylesheet" href="styles/example-large.css">
         <title>WDD 231 - Nathaniel Stokes Home Page</title>
+        <script src="scripts/example.js" defer></script>
     </head>
     <body>
         <header>
@@ -44,42 +45,16 @@
                 </div>
             </section>
             <section class="home-sect" id="certificates">
-                <h2>Certifications and Courses</h2>
+                <h2>Courses</h2>
+                <h3>Toggle Switches</h3>
                 <div class="container" id="butt-cont">
                     <button class="cert-btn" id="all-btn">All</button>
-                    <button class="cert-btn" id="sec-btn">Financial</button>
-                    <button class="cert-btn" id="comp-btn">Computer</button>
-                </div>
-                <div class="container" id="sec-container">
-                    <h3>Security Licenses</h3>
-                    <div class="sub-cont" id="Series63">
-                        <h4>Series 63</h4>
-                    </div>
-                    <div class="sub-cont" id="Series6">
-                        <h4>Series 6</h4>
-                    </div>
-                    <div class="sub-cont" id="SIE">
-                        <h4>SIE</h4>
-                    </div>
+                    <button class="cert-btn" id="wdd-btn">WDD <span class="status">Off</span></button>
+                    <button class="cert-btn" id="cse-btn">CSE <span class="status">Off</span></button>
                 </div>
                 <div class="container" id="comp-container">
-                    <h3>Computer Courses and Learning</h3>
-                    <div class="sub-cont" id="data-science">
-                        <h4>TripleTen Data Science</h4>
-                    </div>
-                    <div class="sub-cont" id="cse111">
-                        <h4>CSE 111 - Programming with Functions</h4>
-                    </div>
-                    <div class="sub-cont" id="cse210">
-                        <h4>CSE 210 - Programming with Classes</h4>
-                    </div>
-                    <div class="sub-cont" id="wdd131">
-                        <h4>WDD 131 - Dynamic Web Fundementals</h4>
-                    </div>
-                    <div class="sub-cont" id="wdd231">
-                        <h4>WDD 231 - Web Frontend Development 1</h4>
-                    </div>
                 </div>
+                <p id="course-credits"></p>
             </section>
         </main>
         <footer>
@@ -109,6 +84,5 @@
             <p id="last-mod"></p>
             <button class="cert-btn" id="day-btn">Day / Night Toggle</button>
         </footer>
-        <script src="scripts/example.js" defer></script>
     </body>
 </html>

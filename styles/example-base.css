@@ -129,6 +129,15 @@ section {
     border-radius: 15px;
     padding: 20px;
 }
+.status {
+    font-size: 0.8em;
+    margin-left: 0.5em;
+    color: red;
+}
+button.active .status {
+    color: green;
+    font-weight: bold;
+}
 .cert-btn {
     padding: 44px;
     border-radius: 10px;
@@ -143,7 +152,7 @@ section {
     background-color: var(--container-bg);
     color: var(--bg-color);
 }
-.sub-cont {
+.course-card {
     background-color: var(--sub-bg);
     color: var(--sub-text);
     text-align: center;
