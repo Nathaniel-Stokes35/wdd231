@@ -29,6 +29,11 @@ body.night {
 body { 
     transition: background-color 0.3s ease, color 0.3s ease;
     background-color: var(--bg-color);
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
 }
 p {
     text-indent: 1.2rem;
@@ -162,7 +167,7 @@ button.active .status {
 }
 footer{
     background-color: var(--footer-bg);
-    padding: 1vw;
+    padding: 0.2vw 0 0.2vw 1vw;
     align-items: center;
     border-radius: 20px;
 }
