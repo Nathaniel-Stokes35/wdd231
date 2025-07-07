@@ -23,6 +23,23 @@
     .navigation a {
         border: none;
     }
+    main {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    #bio {
+        grid-column: 1 / 3;
+    }
+    #stu-photo {
+        place-items: center;
+    }
+    h1, #certificates, #comp-container {
+        grid-column: 1 / -1;
+    }
+    h2, h3, h4 {
+        text-align: center;
+        padding-right: 0.8vw;
+    }
     #butt-cont {
         grid-template-columns: auto auto auto;
         gap: 1vw;

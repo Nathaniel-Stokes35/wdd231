@@ -165,7 +165,7 @@ function renderCourses(courseArray) {
         courseDiv.innerHTML = `
         <h4>${course.subject} ${course.number} - ${course.title} ${course.completed ? '&#10004;' : ''}</h4>
         <p>Credits: ${course.credits}</p>
-        <p>${course.description}</p>
+        <p class="text-container">${course.description}</p>
         `;
         compCont.appendChild(courseDiv);
     });

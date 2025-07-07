@@ -3,13 +3,14 @@
   --text-color: #0a0a0a;
   --accent-color: #3EE6FF;
   --link-color: #20204A;
-  --hover-color: #949495;
+  --hover-color: #C4C4C5;
   --footer-bg: #B4B4B5;
-  --container-bg: #5A5A5A;
+  --container-bg: #D0D0D0;
   --sub-bg: #10B981;
   --sub-text: #444445;
   --border: #202020;
   --btn-hover: #A0A0A0;
+  --title-bg: #00FFC0;
 }
 
 body.night {
@@ -19,11 +20,12 @@ body.night {
   --link-color: #A0FFA0;
   --hover-color: #333333;
   --footer-bg: #1e1e1e;
-  --container-bg: #D0D0D0;
+  --container-bg: #5A5A5A;
   --sub-bg: #232661;
   --sub-text: #cccccc;
   --border: #E0E0E0;
   --btn-hover: #A0A0A0;
+  --title-bg: #303030;
 }
 
 body { 
@@ -35,7 +37,21 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
 }
-p {
+
+.home-sect {
+    background-color: var(--title-bg);
+    overflow: hidden;
+}
+.text-container {
+    padding-top: 0.2rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    width: 100%;
+    height: 100%;
+    background-color: var(--sub-bg);
+    box-sizing: border-box;
+}
+#about-me {
     text-indent: 1.2rem;
 }
 header {
@@ -112,10 +128,16 @@ h1, h2, h3, h4, p {
     color: var(--text-color);
     padding-left: 1vw;
 }
+main {
+    grid-template-columns: 1fr;
+}
 section {
     border: solid 1px var(--border);
     border-radius: 20px;
     margin: 20px;
+}
+#stu-photo {
+    padding-bottom: 24px;
 }
 .img-container {
     padding: 24px;
@@ -126,6 +148,9 @@ section {
 }
 #pers-photo {
     border-radius: 50px;
+}
+#pers-container {
+    background-color: var(--sub-bg);
 }
 #butt-cont {
     display: grid;
@@ -140,7 +165,7 @@ section {
     color: #800000;
 }
 button.active .status {
-    color: green;
+    color: #105911;
     font-weight: bold;
 }
 .cert-btn {
@@ -160,7 +185,7 @@ button.active .status {
 .course-card {
     background-color: var(--sub-bg);
     color: var(--sub-text);
-    text-align: center;
+    align-items: center;
     border-radius: 24px;
     padding: 1px;
     margin: 10px;
