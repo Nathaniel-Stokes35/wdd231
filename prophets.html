@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Facebook (Open Graph) -->
+        <meta property="og:title" content="WDD 231 Latter-Day Prophets - Learning Activity Page">
+        <meta property="og:description" content="Learning Activity Practice Page - Showcasing modern Latter-Day Prophets.">
+        <meta property="og:image" content="https://nathanielstokes.github.io/wdd231/images/site-previews/preview-home.png">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://nathanielstokes.github.io/wdd231/prophets.html">
+        <!-- X (Twitter) -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="WDD 231 Latter-Day Prophets - Learning Activity Page">
+        <meta name="twitter:description" content="Learning Activity Practice Page - Showcasing modern Latter-Day Prophets.">
+        <meta name="twitter:image" content="https://nathanielstokes.github.io/wdd231/images/site-previews/preview-home.png">
+        <meta name="twitter:url" content="https://nathanielstokes.github.io/wdd231/">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+        <meta name="description" content="WDD 231 Latter-Day Prophets - Learning Activity Page">
+        <meta name="author" content="Nathaniel Stokes">
+        <link rel="stylesheet" href="styles/normalize.css">
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"> Alternative CDN reference -->
+        <link rel="stylesheet" href="styles/prophets.css">
+        <title>WDD231 - Learning Activity Practice Page - Showcasing modern Latter-Day Prophets.</title>
+        <script src="scripts/prophets.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <h1>Latter-day Prophets</h1>
+            <section id="controls">
+                <label for="sort">Sort By:</label>
+                <select id="sort">
+                    <option value="prophet-order-asc">Prophet Order</option>
+                    <option value="prophet-order-dsc">Prophet Order (Newest First)</option>
+                    <option value="birth-asc">Birthdate (Oldest First)</option>
+                    <option value="birth-dsc">Birthdate (Latest First)</option>
+                    <option value="last-name">Last Name (A-Z)</option>
+                </select>
+                <label for="filter">Born In:</label>
+                <input type="text" id="filter" placeholder="Enter a Location...">
+            </section>
+        </header>
+        <main>
+            <section class="container" id="card-container">
+                <div id="cards"></div>
+            </section>
+        </main>
+        <button id="day-btn">Day / Night Toggle</button>
+        <footer>
+            Nathaniel Stokes | Latter-day Prophets
+        </footer>
+    </body>
+</html>
