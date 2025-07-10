@@ -1,0 +1,132 @@
+[
+    {
+        "name": "Big Sugar Creek State Park",
+        "address": "State Hwy 90, Pineville, MO 64856",
+        "phone": "417-847-2539",
+        "website": "https://mostateparks.com/park/big-sugar-creek-state-park",
+        "image": "big-sugar-creek.jpg",
+        "membership": 3,
+        "category": "Sights",
+        "local": true
+    },
+    {
+        "name": "Haven 55 Restaurant",
+        "address": "408 Havenhurst Dr, Pineville, MO 64856",
+        "phone": "417-223-2055",
+        "website": "https://www.facebook.com/Haven-55-149684255060341/",
+        "image": "haven-55.jpg",
+        "membership": 2,
+        "category": "Restaurants",
+        "local": true
+    },
+    {
+        "name": "Los Mariachis",
+        "address": "800 MO-59, Anderson, MO 64831",
+        "phone": "417-845-1300",
+        "website": "https://www.facebook.com/andersonlosmariachis/",
+        "image": "los-mariachis.jpg",
+        "membership": 3,
+        "category": "Restaurants",
+        "local": true
+    },
+    {
+        "name": "McDonald County Historical Society",
+        "address": "808 Bailey Rd, Anderson, MO 64831",
+        "phone": "417-223-7700",
+        "website": "https://www.mcdonaldcohistory.org",
+        "image": "mcdonald-history.jpg",
+        "membership": 3,
+        "category": "Sights",
+        "local": true
+    },
+    {
+        "name": "Silver Dollar City",
+        "address": "399 Silver Dollar City Pkwy, Branson, MO 65616",
+        "phone": "800-888-7277",
+        "website": "https://www.silverdollarcity.com",
+        "image": "silver-dollar-city.webp",
+        "membership": 1,
+        "category": "Attractions",
+        "local": false
+    },
+    {
+        "name": "Tanyard Creek Nature Trail",
+        "address": "Tanyard Creek Rd, Bella Vista, AR 72715",
+        "phone": "479-855-5073",
+        "website": "https://www.bellavistaar.gov/recreation/trails/tanyard_creek.php",
+        "image": "tanyard-creek.webp",
+        "membership": 2,
+        "category": "Sights",
+        "local": false
+    },
+    {
+        "name": "Bentonville Arkansas Temple",
+        "address": "1105 McCollum Dr, Bentonville, AR 72712",
+        "phone": "479-319-2616",
+        "website": "https://www.churchofjesuschrist.org/temples/details/bentonville-arkansas-temple?lang=eng",
+        "image": "bentonville_arkansas_temple.webp",
+        "membership": 3,
+        "category": "Sights",
+        "local": false
+    },
+    {
+        "name": "Lakepoint Restaurant and Event Center",
+        "address": "101 Marina Dr, Bella Vista, AR 72715",
+        "phone": "479-855-8111",
+        "website": "https://www.bvrestaurants.com/lakepoint",
+        "image": "lakepoint.webp",
+        "membership": 2,
+        "category": "Restaurants",
+        "local": false
+    },
+    {
+        "name": "Bluff Dweller's Cave",
+        "address": "Noel, MO 64854",
+        "phone": "417-476-3385",
+        "website": "https://www.bluffdwellerscave.com",
+        "image": "bluff-dwellers-cave.jpg",
+        "membership": 2,
+        "category": "Attractions",
+        "local": true
+    },
+    {
+        "name": "Bella Vista Disc Golf Course",
+        "address": "3000 Golf Dr, Bella Vista, AR 72714",
+        "phone": "",
+        "website": "",
+        "image": "bv-disc-golf.jpg",
+        "membership": 1,
+        "category": "Attractions",
+        "local": false
+    },
+    {
+        "name": "Access Family Care Clinic",
+        "address": "150 Hwy 71 S, Anderson, MO 64831",
+        "phone": "417-847-3318",
+        "website": "https://www.accessfamilyclinic.org",
+        "image": "access-family-care.jpg",
+        "membership": 3,
+        "category": "Services",
+        "local": true
+    },
+    {
+        "name": "Ray's Towing & Recovery",
+        "address": "405 State Hwy 90, Pineville, MO 64856",
+        "phone": "417-223-9022",
+        "website": "https://www.facebook.com/RaysTowingLLC/",
+        "image": "rays-towing.jpg",
+        "membership": 2,
+        "category": "Services",
+        "local": true
+    },
+    {
+        "name": "Sean Crider State Farm Agency",
+        "address": "3353 S. Hwy 71B, Pineville, MO 64856",
+        "phone": "417-223-2300",
+        "website": "https://www.statefarm.com/agent/us/mo/pineville/sean-crider-lqtn03mc000",
+        "image": "crider-state-farm.jpg",
+        "membership": 2,
+        "category": "Services",
+        "local": true
+    }
+]
