@@ -139,7 +139,7 @@ function renderMembers(memberArray) {
 
         memberDiv.innerHTML = `
         <ul class="card-ul">
-            <li><h4>${member.name}</h4> <img src="images/${member.image}" class="card-img"></li>
+            <li><h4>${member.name}</h4></li>
             <li><h5>Contact Information:</h5></li>
             <li><p>Address: ${member.address}</p></li>
             <li><p>Phone: ${member.phone}</p></li>
@@ -167,7 +167,9 @@ navbtn.addEventListener('click', () => {
 allbtn.addEventListener('click', () => {
     if (activeSubjects.size < 4) {
         activeSubjects = new Set(['res', 'att', 'sig', 'serv']);
-        const filtered = members.filter(member => activeSubjects.has(member.category));
+        const filtered = members.filter(member =>
+            activeSubjects.has(categoryMap[member.category])
+        );
         renderMembers(filtered);
     } else {
         activeSubjects.clear();
