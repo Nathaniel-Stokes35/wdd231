@@ -3,6 +3,12 @@ const levelNames = {
   2: "Silver",
   3: "Gold"
 };
+const categoryMap = {
+    'Restaurants': 'res',
+    'Attractions': 'att',
+    'Sights': 'sig',
+    'Services': 'serv'
+};
 
 const navbtn = document.querySelector('#ham-btn');
 const navLinks = document.querySelector('#nav-bar');
@@ -36,18 +42,26 @@ async function loadMembers() {
 
         const featured = members.filter(item => item.membership === 3);
         const container = document.getElementById("hero-gallery");
+        container.innerHTML = '';
 
         featured.forEach((item, index) => {
-        const slide = document.createElement("div");
-        slide.classList.add("hero-slide");
-        if (index === 0) slide.classList.add("active");
-        slide.style.backgroundImage = `url('images/${item.image}')`;
-        slide.innerHTML = `
-            <h1>${item.name}</h1>
-            <p>${item.category} • ${item.local ? 'Local' : 'Regional'}</p>
-            <a href="${item.website}" target="_blank">Visit Website</a>
-        `;
-        container.appendChild(slide);
+            const slide = document.createElement("div");
+            slide.classList.add("hero-slide");
+            if (index === 0) slide.classList.add("active");
+
+            slide.innerHTML = `
+                <picture>
+                    <source media="(max-width: 38rem)" srcset="images/mobile-${item.image}">
+                    <img src="images/${item.image}" alt="${item.name}" class="hero-img" loading="lazy">
+                </picture>
+                <div class="hero-text">
+                    <h1>${item.name}</h1>
+                    <p>${item.category} • ${item.local ? 'Local' : 'Regional'}</p>
+                    <a href="${item.website}" target="_blank">Visit Website</a>
+                </div>
+            `;
+
+            container.appendChild(slide);
         });
 
         let current = 0;
@@ -91,7 +105,9 @@ function toggleSubject(subject) {
     if (activeSubjects.size === 0) {
         clearMembers();
     } else {
-        const filtered = members.filter(member => activeSubjects.has(member.category));
+        const filtered = members.filter(member =>
+            activeSubjects.has(categoryMap[member.category])
+        );
         renderMembers(filtered);
     }
 
