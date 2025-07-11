@@ -130,25 +130,28 @@ function toggleButtonState() {
     sigStatus.textContent = activeSubjects.has('sig') ? 'On' : 'Off';
     servStatus.textContent = activeSubjects.has('serv') ? 'On' : 'Off';
 }
-
 function renderMembers(memberArray) {
     compCont.innerHTML = '';
-    memberArray.forEach(member => {
-        const memberDiv = document.createElement('div');
-        memberDiv.classList.add('member-card');
 
-        memberDiv.innerHTML = `
-        <ul class="card-ul">
-            <li><h4>${member.name}</h4></li>
-            <li><h5>Contact Information:</h5></li>
-            <li><p>Address: ${member.address}</p></li>
-            <li><p>Phone: ${member.phone}</p></li>
-            <li><a href="${member.website}" target="_blank">Visit Website</a></li>
-            <li><p>Membership Level: ${levelNames[member.membership]}</p></li>
-        </ul>
+    memberArray.forEach(member => {
+        const memberCard = document.createElement('article');
+        memberCard.classList.add('member-card');
+
+        memberCard.innerHTML = `
+            <div class="card-header">
+                <h4>${member.name}</h4>
+                <img src="images/${member.image}" alt="${member.name}" class="card-img" loading="lazy">
+            </div>
+            <div class="card-body">
+                <h5>Contact Information</h5>
+                <p><strong>Address:</strong> ${member.address}</p>
+                <p><strong>Phone:</strong> ${member.phone}</p>
+                <p><strong>Membership Level:</strong> ${levelNames[member.membership]}</p>
+                <p><a href="${member.website}" target="_blank" rel="noopener">Visit Website</a></p>
+            </div>
         `;
 
-        compCont.appendChild(memberDiv);
+        compCont.appendChild(memberCard);
     });
 
     compCont.classList.add('show');

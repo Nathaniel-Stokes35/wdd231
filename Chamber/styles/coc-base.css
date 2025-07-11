@@ -214,8 +214,28 @@ section {
     border-radius: 20px;
     margin: 20px;
 }
-#stu-photo {
-    padding-bottom: 24px;
+.member-card {
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 1rem;
+    margin: 1rem;
+    background-color: var(--container-bg);
+    color: var(--text-color);
+}
+
+.card-img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-top: 0.5rem;
+}
+
+.card-header h4 {
+    margin-bottom: 0.5rem;
+}
+
+.card-body p {
+    margin: 0.4rem 0;
 }
 .img-container {
     padding: 24px;
@@ -223,12 +243,6 @@ section {
     border: solid 1px var(--border);
     border-radius: 20px;
     text-align: center;
-}
-#pers-photo {
-    border-radius: 50px;
-}
-#pers-container {
-    background-color: var(--sub-bg);
 }
 #butt-cont {
     display: grid;
@@ -259,14 +273,6 @@ button.active .status {
     border-radius: 15px;
     background-color: var(--container-bg);
     color: var(--bg-color);
-}
-.course-card {
-    background-color: var(--sub-bg);
-    color: var(--sub-text);
-    align-items: center;
-    border-radius: 24px;
-    padding: 1px;
-    margin: 10px;
 }
 footer{
     background-color: var(--footer-bg);
