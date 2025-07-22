@@ -23,6 +23,7 @@ const toggbtn = document.querySelector("#toggle-btn");
 const compCont = document.querySelector('#comp-container');
 
 let activeSubjects = new Set();
+let members = [];
 
 document.body.classList.add(isDayTime ? 'day' : 'night');
 

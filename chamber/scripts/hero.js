@@ -1,5 +1,3 @@
-let members = [];
-
 async function loadMembers() {
     try {
         const response = await fetch('data/members.json');
