@@ -9,91 +9,22 @@ const categoryMap = {
     'Sights': 'sig',
     'Services': 'serv'
 };
+const today = new Date();
+const hour = today.getHours();
+const isDayTime = hour >= 7 && hour < 19;
 
-const navbtn = document.querySelector('#ham-btn');
-const navLinks = document.querySelector('#nav-bar');
+const daybtn = document.querySelector('#day-btn');
 const allbtn = document.querySelector('#all-btn');
 const resbtn = document.querySelector('#res-btn');
 const attbtn = document.querySelector('#att-btn');
 const sigbtn = document.querySelector('#sig-btn');
 const servbtn = document.querySelector('#serv-btn');
+const toggbtn = document.querySelector("#toggle-btn");
 const compCont = document.querySelector('#comp-container');
-const yearCont = document.querySelector('#curr-year');
-const modCont = document.querySelector('#last-mod');
-const daybtn = document.querySelector('#day-btn');
-
-const today = new Date();
-const hour = today.getHours();
-const isDayTime = hour >= 7 && hour < 19;
-
-const modRaw = document.lastModified;
-const modDate = new Date(modRaw);
-const options = { year: 'numeric', month: 'long', day: 'numeric' };
-const modified_date = modDate.toLocaleDateString(undefined, options);
-
-let members = [];
-
-async function loadMembers() {
-    try {
-        const response = await fetch('data/members.json');
-        if (!response.ok) throw new Error('Network response was not ok');
-        members = await response.json();
-        console.log(members);
-
-        const featured = members.filter(item => item.membership === 3);
-        const container = document.getElementById("hero-gallery");
-        container.innerHTML = '';
-
-        featured.forEach((item, index) => {
-            const slide = document.createElement("div");
-            slide.classList.add("hero-slide");
-            if (index === 0) slide.classList.add("active");
-
-            slide.innerHTML = `
-                <picture>
-                    <source media="(max-width: 38rem)" srcset="images/mobile-${item.image}">
-                    <img src="images/${item.image}" alt="${item.name}" class="hero-img" loading="lazy">
-                </picture>
-                <div class="hero-text">
-                    <h1>${item.name}</h1>
-                    <p>${item.category} • ${item.local ? 'Local' : 'Regional'}</p>
-                    <a href="${item.website}" target="_blank">Visit Website</a>
-                </div>
-            `;
-
-            container.appendChild(slide);
-        });
-
-        let current = 0;
-        const slides = document.querySelectorAll('.hero-slide');
-
-        const showSlide = index => {
-        slides.forEach(s => s.classList.remove('active'));
-        slides[index].classList.add('active');
-        };
-
-        document.querySelector('.next').addEventListener('click', () => {
-        current = (current + 1) % slides.length;
-        showSlide(current);
-        });
-
-        document.querySelector('.prev').addEventListener('click', () => {
-        current = (current - 1 + slides.length) % slides.length;
-        showSlide(current);
-        });
-
-    } catch (error) {
-        console.error('Fetch error:', error);
-    }
-}
-
-loadMembers();
 
 let activeSubjects = new Set();
 
 document.body.classList.add(isDayTime ? 'day' : 'night');
-yearCont.innerHTML = today.getFullYear();
-modCont.innerHTML = `Last Modified: ${modified_date}`;
 
 function toggleSubject(subject) {
     if (activeSubjects.has(subject)) {
@@ -162,11 +93,6 @@ function clearMembers() {
     compCont.classList.remove('show');
 }
 
-navbtn.addEventListener('click', () => {
-    navbtn.classList.toggle('show');
-    navLinks.classList.toggle('show');
-});
-
 allbtn.addEventListener('click', () => {
     if (activeSubjects.size < 4) {
         activeSubjects = new Set(['res', 'att', 'sig', 'serv']);
@@ -179,6 +105,15 @@ allbtn.addEventListener('click', () => {
         clearMembers();
     }
     toggleButtonState();
+});
+
+gridbtn.addEventListener('click', () => {
+    compCont.classList.remove('list');
+    compCont.classList.add('grid');
+});
+listbtn.addEventListener('click', () => {
+    compCont.classList.remove('grid');
+    compCont.classList.add('list');
 });
 
 resbtn.addEventListener('click', () => toggleSubject('res'));

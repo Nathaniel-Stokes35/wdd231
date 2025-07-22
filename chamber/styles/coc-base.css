@@ -106,7 +106,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .hero-nav {
     position: absolute;
-    top: 50%;
+    top: 50vh;
     transform: translateY(-50%);
     background: var(--hero-btn);
     border: none;
@@ -222,7 +222,15 @@ section {
     background-color: var(--container-bg);
     color: var(--text-color);
 }
-
+.main-cont {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.grid{
+    display: grid;
+}
 .card-img {
     width: 100%;
     height: auto;
