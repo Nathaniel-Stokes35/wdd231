@@ -275,8 +275,7 @@ section {
 }
 
 #comp-container.list img {
-    height: auto;
-    object-fit: contain;
+    display: none;
 }
 
 #comp-container.list .card-body {
