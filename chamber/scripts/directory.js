@@ -1,29 +1,13 @@
-const levelNames = {
-  1: "Member",
-  2: "Silver",
-  3: "Gold"
-};
-const categoryMap = {
-    'Restaurants': 'res',
-    'Attractions': 'att',
-    'Sights': 'sig',
-    'Services': 'serv'
-};
-const today = new Date();
-const hour = today.getHours();
-const isDayTime = hour >= 7 && hour < 19;
-
-const daybtn = document.querySelector('#day-btn');
 const allbtn = document.querySelector('#all-btn');
 const resbtn = document.querySelector('#res-btn');
 const attbtn = document.querySelector('#att-btn');
 const sigbtn = document.querySelector('#sig-btn');
 const servbtn = document.querySelector('#serv-btn');
-const toggbtn = document.querySelector("#toggle-btn");
+const gridbtn = document.querySelector("#grid-btn");
+const listbtn = document.querySelector('#list-btn');
 const compCont = document.querySelector('#comp-container');
 
 let activeSubjects = new Set();
-let members = [];
 
 document.body.classList.add(isDayTime ? 'day' : 'night');
 
@@ -62,6 +46,42 @@ function toggleButtonState() {
     sigStatus.textContent = activeSubjects.has('sig') ? 'On' : 'Off';
     servStatus.textContent = activeSubjects.has('serv') ? 'On' : 'Off';
 }
+
+function handleDirectory(loadedMembers) {
+    members = loadedMembers;
+    activeSubjects = new Set(['res', 'att', 'sig', 'serv']);
+    renderMembers(members);
+    toggleButtonState();
+
+    allbtn.addEventListener('click', () => {
+        if (activeSubjects.size < 4) {
+            activeSubjects = new Set(['res', 'att', 'sig', 'serv']);
+            const filtered = members.filter(member =>
+                activeSubjects.has(categoryMap[member.category])
+            );
+            renderMembers(filtered);
+        } else {
+            activeSubjects.clear();
+            clearMembers();
+        }
+        toggleButtonState();
+    });
+
+    gridbtn.addEventListener('click', () => {
+        compCont.classList.remove('list');
+        compCont.classList.add('grid');
+    });
+    listbtn.addEventListener('click', () => {
+        compCont.classList.remove('grid');
+        compCont.classList.add('list');
+    });
+
+    resbtn.addEventListener('click', () => toggleSubject('res'));
+    attbtn.addEventListener('click', () => toggleSubject('att'));
+    sigbtn.addEventListener('click', () => toggleSubject('sig'));
+    servbtn.addEventListener('click', () => toggleSubject('serv'));
+}
+
 function renderMembers(memberArray) {
     compCont.innerHTML = '';
 
@@ -93,36 +113,3 @@ function clearMembers() {
     compCont.innerHTML = '';
     compCont.classList.remove('show');
 }
-
-allbtn.addEventListener('click', () => {
-    if (activeSubjects.size < 4) {
-        activeSubjects = new Set(['res', 'att', 'sig', 'serv']);
-        const filtered = members.filter(member =>
-            activeSubjects.has(categoryMap[member.category])
-        );
-        renderMembers(filtered);
-    } else {
-        activeSubjects.clear();
-        clearMembers();
-    }
-    toggleButtonState();
-});
-
-gridbtn.addEventListener('click', () => {
-    compCont.classList.remove('list');
-    compCont.classList.add('grid');
-});
-listbtn.addEventListener('click', () => {
-    compCont.classList.remove('grid');
-    compCont.classList.add('list');
-});
-
-resbtn.addEventListener('click', () => toggleSubject('res'));
-attbtn.addEventListener('click', () => toggleSubject('att'));
-sigbtn.addEventListener('click', () => toggleSubject('sig'));
-servbtn.addEventListener('click', () => toggleSubject('serv'));
-
-daybtn.addEventListener('click', () => {
-    document.body.classList.toggle('day');
-    document.body.classList.toggle('night');
-});

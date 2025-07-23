@@ -214,6 +214,25 @@ section {
     border-radius: 20px;
     margin: 20px;
 }
+#view-btns {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+#view-btns button {
+    transition: background-color 0.2 ease;
+}
+#grid-btn {
+    justify-content: flex-start;
+    margin-left: 1rem;
+}
+#list-btn {
+    justify-content: flex-end;
+    margin-right: 1rem;
+}
 .member-card {
     border: 1px solid var(--border);
     border-radius: 20px;
@@ -221,21 +240,61 @@ section {
     margin: 1rem;
     background-color: var(--container-bg);
     color: var(--text-color);
-}
-.main-cont {
-    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+}
+
+#comp-container.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+#comp-container.list{
+    display: block;
+    gap: 1rem;
+}
+
+#comp-container.list .member-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 12px;
+}
+
+#comp-container.list img {
+    height: auto;
+    object-fit: contain;
+}
+
+#comp-container.list .card-body {
+    flex: 1;
+}
+#comp-container.list .card-header {
+    width: 40%;
+    justify-content: center;
     align-items: center;
 }
-.grid{
-    display: grid;
+
+#comp-container.list .card-body h2 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.25rem;
+}
+
+#comp-container article {
+    max-width: 100%;
 }
 .card-img {
     width: 100%;
     height: auto;
+    object-fit: cover;
     border-radius: 12px;
     margin-top: 0.5rem;
+    display: block;
 }
 
 .card-header h4 {
