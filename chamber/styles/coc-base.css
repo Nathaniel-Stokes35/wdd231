@@ -231,7 +231,7 @@ section {
     justify-content: space-between;
 }
 #view-btns button {
-    transition: background-color 0.2 ease;
+    transition: background-color 0.2s ease;
 }
 #grid-btn {
     justify-content: flex-start;
