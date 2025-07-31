@@ -22,14 +22,15 @@
         <link rel="icon" href="images/coc-favicon.ico" type="image/x-icon">
         <meta name="description" content="Responsive and accessible Chamber of Commerce Home Page Example designed by Nathaniel Stokes for WDD 231.">
         <meta name="author" content="Nathaniel Stokes">
-        <link rel="stylesheet" href="styles/normalize.css">
+        <!-- <link rel="stylesheet" href="styles/normalize.css"> -->
         <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"> Alternative CDN reference -->
         <link rel="stylesheet" href="styles/coc-base.css">
         <link rel="stylesheet" href="styles/coc-large.css">
         <title>Chamber of Commerce Home Page - WDD 231 - Nathaniel Stokes</title>
-        <script src="scripts/coc.js" defer></script>
+        <script src="scripts/main.js" defer></script>
+        <script src="scripts/home.js" defer></script>
     </head>
-    <body>
+    <body class="home">
         <header>
             <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="300" height="153" viewBox="0 0 300.000000 153.000000" preserveAspectRatio="xMidYMid meet" class="site-logo">
                 <g transform="translate(0.000000,153.000000) scale(0.100000,-0.100000)" fill="#A0A0A0" stroke="none">
@@ -74,29 +75,40 @@
         <nav id="nav-bar" class="navigation">
             <ul>
                 <li class="current"><a href="#">Home</a></li> <!--"current" is the wayfinder class (To indicate to the user where they are at) -->
-                <li><a href="#">Directory</a></li>
+                <li><a href="directory.html">Directory</a></li>
                 <li><a href="#">Join</a></li>
                 <li><a href="#">Discover</a></li>
             </ul>
         </nav>
         <main>
             <h1>Home</h1>
-            <section class="home-sect" id="bio">
-                <h2>Spotlight</h2>
+            <section class="full-row" id="hero-gallery">
+                <h2>Welcome to Our Chamber!</h2>
+
+            </section>
+            <section class="full-row" id="spot-sect">
+                <div class="spot-aside" id="spotlight" aria-label="Business Spotlight">
+                    <h2>Business Spotlight</h2>
+                    
+                </div>
+                <div class="spot-aside" id="curr-weather" aria-label="Current Weather">
+                    <h2>Current Weather</h2>
+
+                </div>
+            </section>
+            <section class="full-row" id="curr-sect">
+                <h2>Current Events</h2>
+                <ul id="curr-list"></ul>
+            </section>
+            <section class="full-row" id="join-sect">
                 <div class="text-container">
-                    <p id="about-me">
-                        My name is Nathaniel Stokes—though you can call me Nathan, Nate, or whatever feels right. I've been interested in computers ever since my grandfather introduced me to my first logic puzzle. I started building computers at age 11, but it wasn't until junior year of high school, during an actual Java class, that I really found my love for programming. When I fell into the trap that is logic-based languages, I fell hard—I would spend hours after school expanding on basic assignments just for the thrill—and the challenge—of discovery within it.
-                    </p>
+                    <h2>Join the Chamber!</h2>
+                    <p>Are you looking for positive outputs to get your business out to the people and become a household name? Do you have multiple projects for community outreach but lack the resources to expand? Are you frustrated by promised networking opportunities being little more than a glorified garage sale and nothing substantial coming from it?</p>
+                    <p>Join the chamber and connect with businesses and people looking to develop and grow the county; you may be one worthwhile conversation from the big break you've been looking for, and it's sitting at the chamber tables, waiting for you.</p>
+                    <div class="join-cont">
+                        <button id="join-btn">Join Now!</button>
+                    </div>
                 </div>
-            </section>
-            <section class="home-sect" id="stu-photo">
-                <h2>Weather</h2>
-                <div class="img-container" id="pers-container">
-                    <img src="images/temple_photo.png" alt="My Family in front of the Temple" id="pers-photo">
-                </div>
-            </section>
-            <section class="home-sect" id="certificates">
-                
             </section>
         </main>
         <footer>

@@ -27,6 +27,17 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
     }
+    #spot-sect {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .spot-aside {
+        border: solid 1px var(--border);
+        border-radius: 20px;
+        padding: 1rem;
+        min-height: 100px;
+    }
+
     .dir-main {
         display:block;
     }
