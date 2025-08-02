@@ -265,9 +265,9 @@ main {
     min-width: 100%;
     box-sizing: border-box;
     padding: 1rem;
-    border: 1px solid #ccc;
+    border: 1px solid var(--border);
     margin: 0 auto;
-    background-color: #fff;
+    background-color: var(--accent-color);
     text-align: center;
 }
 
@@ -275,8 +275,8 @@ main {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: #444;
-    color: #fff;
+    background: var(--bg-color);
+    color: var(--container-bg);
     border: none;
     padding: 0.5rem;
     cursor: pointer;
