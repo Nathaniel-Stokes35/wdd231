@@ -211,6 +211,9 @@ main {
     border: solid 1px var(--border);
     border-radius: 20px;
     background-color: var(--sub-bg);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 #view-btns {
     position: sticky;
@@ -248,7 +251,6 @@ main {
     position: relative;
     overflow: hidden;
     max-width: 100%;
-    background-color: var(--accent-color);
 }
 
 .carousel-track-container {
@@ -259,7 +261,6 @@ main {
     display: flex;
     transition: transform 0.4s ease-in-out;
     will-change: transform;
-    background-color: var(--accent-color);
 }
 
 .spotlight-card {
