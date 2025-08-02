@@ -18,7 +18,7 @@
 body.night {
   --bg-color: #121212;
   --text-color: #ffffff;
-  --accent-color: #105911;
+  --accent-color: #103911;
   --link-color: #A0FFA0;
   --visited-color: #80f0ff;
   --hover-color: #333333;
@@ -174,17 +174,16 @@ a:visited {
     color: var(--visited-color);
 }
 
-h1, h2, h3, h4, p {
+h1, h2, h3, h4, p, strong, em {
     color: var(--text-color);
     padding-left: 1vw;
-}
-.example {
-    font-size: 30vh;
-    color: var(--accent-color)
 }
 
 main {
     display: block;
+}
+#hero-img {
+    width: 100%;
 }
 .full-row {
     grid-column: 1 / 4;
@@ -193,7 +192,6 @@ main {
     border-radius: 20px;
     margin: 20px;
     background-color: var(--container-bg);
-    width: 100%;
 }
 .home-sect {
     border: solid 1px var(--border);
@@ -278,7 +276,7 @@ main {
     top: 50%;
     transform: translateY(-50%);
     background: var(--bg-color);
-    color: var(--container-bg);
+    color: var(--text-color);
     border: none;
     padding: 0.5rem;
     cursor: pointer;
