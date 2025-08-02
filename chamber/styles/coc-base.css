@@ -193,6 +193,7 @@ main {
     border-radius: 20px;
     margin: 20px;
     background-color: var(--container-bg);
+    width: 100%;
 }
 .home-sect {
     border: solid 1px var(--border);
