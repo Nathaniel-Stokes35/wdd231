@@ -6,14 +6,14 @@ const apiKey = '5ed0e22fbc6848ee0a15a76a220f8912';
 const city = "Pineville,US";
 
 function handleSpotlight(members) {
-
-    if (!spotlightCont) return;
+    const spotlightScroll = document.querySelector(".spotlight-scroll");
+    if (!spotlightScroll) return;
 
     const spotlightMembers = members.filter(biz => biz.membership >= 2);
     const shuffled = spotlightMembers.sort(() => 0.5 - Math.random());
     const selected = shuffled.slice(0, 3); 
 
-    spotlightCont.innerHTML = '';
+    spotlightScroll.innerHTML = '';
 
     selected.forEach(biz => {
         const card = document.createElement("div");
@@ -28,7 +28,7 @@ function handleSpotlight(members) {
             <p class="website"><a href="${biz.website}" target="_blank" rel="noopener">Visit Website</a></p>
         `;
 
-        spotlightCont.appendChild(card);
+        spotlightScroll.appendChild(card);
     });
 }
 
