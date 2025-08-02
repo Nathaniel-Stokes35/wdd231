@@ -245,16 +245,54 @@ main {
     flex-direction: column;
 }
 
-#spotlight {
+.carousel {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.carousel-track-container {
     overflow: hidden;
 }
 
-.spotlight-scroll {
+.carousel-track {
     display: flex;
-    gap: 1rem;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    padding-bottom: 1rem;
+    transition: transform 0.4s ease-in-out;
+    will-change: transform;
+}
+
+.spotlight-card {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    margin: 0 auto;
+    background-color: #fff;
+    text-align: center;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #444;
+    color: #fff;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.carousel-btn.prev {
+    left: 0.5rem;
+}
+
+.carousel-btn.next {
+    right: 0.5rem;
+}
+
+#spotlight {
+    overflow: hidden;
 }
 
 .spotlight-card {
@@ -274,18 +312,10 @@ main {
 }
 
 .spot-img {
-    width: 33%;
+    width: 100%;
     height: auto;
     border-radius: 8px;
     margin-bottom: 0.5rem;
-}
-.spotlight-scroll::-webkit-scrollbar {
-    height: 8px;
-}
-
-.spotlight-scroll::-webkit-scrollbar-thumb {
-    background-color: rgba(0,0,0,0.2);
-    border-radius: 4px;
 }
 
 #comp-container.grid{
