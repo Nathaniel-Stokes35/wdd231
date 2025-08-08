@@ -13,6 +13,7 @@
   --btn-hover: #A0A0A0;
   --title-bg: #00FFC0;
   --hero-btn: rgba(0,0,0,0.3);
+  --highlight-bg: #FFFF97;
 }
 
 body.night {
@@ -30,6 +31,7 @@ body.night {
   --btn-hover: #A0A0A0;
   --title-bg: #202020;
   --hero-btn: rgba(200, 200, 200, 0.3);
+  --highlight-bg: #391110;
 }
 
 body { 
@@ -90,6 +92,10 @@ h1, h2, h3, h4, h5, h6 {
     background-color: var(--sub-bg);
     box-sizing: border-box;
     border-radius: 20px;
+    text-align: center;
+}
+.thank-you-container {
+    text-align: center;
 }
 
 header {
@@ -131,6 +137,19 @@ header span {
 }
 .navigation.show {
     display: block;
+}
+
+dialog {
+    border: none;
+    border-radius: 8px;
+    padding: 2rem;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 #comp-container {
@@ -244,6 +263,15 @@ main {
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    transition: background-color 5s;
+}
+#contact-email {
+    width: 300px;
+}
+
+.member-card.highlighted {
+  background-color: var(--highlight-bg);
+  transition: 5s;
 }
 
 .carousel {
@@ -263,12 +291,26 @@ main {
 }
 
 .spotlight-card {
-    min-width: 100%;
-    box-sizing: border-box;
-    padding: 1rem;
+    flex: 0 0 auto;
+    width: 250px;
+    background: var(--accent-color);
     border: 1px solid var(--border);
-    margin: 0 auto;
-    text-align: center;
+    border-radius: 10px;
+    padding: 1rem;
+    scroll-snap-align: start;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.spotlight-card:hover {
+    transform: scale(1.03);
+}
+
+.spot-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
 }
 
 .carousel-btn {
@@ -295,28 +337,6 @@ main {
     overflow: hidden;
 }
 
-.spotlight-card {
-    flex: 0 0 auto;
-    width: 250px;
-    background: var(--accent-color);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 1rem;
-    scroll-snap-align: start;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-
-.spotlight-card:hover {
-    transform: scale(1.03);
-}
-
-.spot-img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 0.5rem;
-}
 
 #curr-weather {
     width: 30%;
@@ -379,6 +399,21 @@ main {
 .card-body p {
     margin: 0.4rem 0;
 }
+
+.membership-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.member-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+label {
+    color: var(--text-color)
+}
 .img-container {
     padding: 24px;
     align-items: center;
@@ -392,6 +427,47 @@ main {
     text-align: center;
     border-radius: 15px;
     padding: 20px;
+}
+.member-card {
+    justify-content: center;
+    align-items: center;
+}
+.submit-button {
+    background-color: var(--hover-color);
+    color: var(--text-color);
+    box-shadow: 0 2px 6px var(--hero-btn);
+}
+select {
+    padding: 1rem;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+}
+.modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+#submit-div {
+    text-align: center;
 }
 .join-cont {
     width: 100%; 
