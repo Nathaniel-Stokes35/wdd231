@@ -32,7 +32,7 @@
     </head>
     <body>
         <header>
-            <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="300" height="153" viewBox="0 0 300.000000 153.000000" preserveAspectRatio="xMidYMid meet" class="site-logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="300" height="153" viewBox="0 0 300.000000 153.000000" preserveAspectRatio="xMidYMid meet" class="site-logo">
                 <g transform="translate(0.000000,153.000000) scale(0.100000,-0.100000)" fill="#A0A0A0" stroke="none">
                     <path d="M369 1211 l-29 -29 0 -395 0 -394 26 -27 27 -26 1083 0 1083 0 26 23 26 22 0 405 -1 405 -26 23 -25 22 -1080 0 -1081 0 -29 -29z m2195 -12 l26 -20 0 -389 c0 -388 0 -389 -22 -410 -22 -20 -29 -20 -1088 -20 -948 0 -1068 2 -1088 16 l-22 15 0 393 c0 404 1 415 40 429 8 3 490 6 1071 6 1054 1 1056 1 1083 -20z" id="logo-border"/>
                     <path d="M523 1100 c-12 -5 -26 -18 -32 -29 -7 -12 -11 -119 -11 -294 0 -262 1 -275 21 -301 l20 -26 295 0 295 0 24 25 25 24 0 279 c0 261 -1 281 -19 303 l-19 24 -289 2 c-158 1 -298 -2 -310 -7z m588 -20 c18 -10 19 -24 19 -298 0 -211 -3 -291 -12 -300 -9 -9 -89 -12 -299 -12 -286 0 -288 0 -303 22 -14 19 -16 64 -16 288 0 273 2 290 40 303 29 10 551 7 571 -3z" id="inside-logo-border"/>
@@ -86,51 +86,60 @@
             <form method="get" action="thankyou.html">
                 <div class="form-sect" id="nameplate">
                     <h2>Organization & Contact Info</h2>
-                    <label for="org-name">Organization Name: 
-                        <input type="text" 
-                        name="org-name" 
-                        placeholder="Organization Name..." 
-                        autocomplete="organization" 
-                        id="org-name"
-                        minlength="7"
-                        pattern="[A-Za-z0-9\- ]+"
-                        title="Must be at least 7 characters. Letters, numbers, hyphens, and spaces only." 
-                        required>
-                    </label></br>
-                    <label for="first-name">First Name: <input type="text" name="first-name" placeholder="" id="first-name" autocomplete="given-name" title="First, or given, contact name." required></label></br>
-                    <label for="last-name">Last Name: <input type="text" name="last-name" placeholder="" id="last-name" autocomplete="family-name" title="Last, or family, contact name" required></label></br>
-                    <label for="contact-email">Email: <input type="email" name="contact-email" placeholder="contact.name@Organization.com" autocomplete="off" title="Contact email for newsletter and correspondance" id="contact-email" required></label></br>
-                    <label for="phone-number">Phone Number: <input type="tel" name="phone-number" placeholder="1(417)555-5555" id="phone-number" title="contact phone number for advertising and correspondance" required></label></br>
-                    <label for="membership-level">Desired Membership Level:  
-                    <select id="membership-level" name="membership-level" title="Desired membership level, expected benefits and payment" required>
-                        <option value="" disabled selected>Choose Level...</option>
-                        <option value="NP-member">Non-Profit Member</option>
-                        <option value="bronze">Bronze</option>
-                        <option value="silver">Silver</option>
-                        <option value="gold">Gold</option>
-                    </select></label></br>
-                    <label for="org-desc" maxlength="500" title="Organization description, max of 500 characters">Organization Description: </br>
-                    <textarea name="org-desc" id="org-desc" rows="4" cols="40"></textarea></label>
+                    <div class="form-group">
+                        <label for="org-name">Organization Name:</label>
+                        <input type="text" name="org-name" id="org-name" placeholder="Organization Name..." autocomplete="organization" minlength="7" pattern="[A-Za-z0-9\- ]+" title="Must be at least 7 characters. Letters, numbers, hyphens, and spaces only." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="first-name">First Name:</label>
+                        <input type="text" name="first-name" id="first-name" autocomplete="given-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="last-name">Last Name:</label>
+                        <input type="text" name="last-name" id="last-name" autocomplete="family-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-email">Email:</label>
+                        <input type="email" name="contact-email" id="contact-email" placeholder="contact.name@Organization.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone-number">Phone Number:</label>
+                        <input type="tel" name="phone-number" id="phone-number" placeholder="1(417)555-5555" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="membership-level">Desired Membership Level:</label>
+                        <select id="membership-level" name="membership-level" required>
+                            <option value="" disabled selected>Choose Level...</option>
+                            <option value="NP-member">Non-Profit Member</option>
+                            <option value="bronze">Bronze</option>
+                            <option value="silver">Silver</option>
+                            <option value="gold">Gold</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                    <label for="org-desc">Organization Description:</label>
+                    <textarea name="org-desc" id="org-desc" rows="4" cols="40" maxlength="500"></textarea>
+                    </div>
                     <input type="hidden" name="submittedDate" value="">
                 </div>
                 <div id="submit-div">
-                    <label id="submit"><input type="submit" name="info-submit" value="Submit Info" class="submit-button"></label>
+                    <input type="submit" name="info-submit" value="Submit Info" class="submit-button">
                 </div>
             </form>
             <div>
-                <div class="member-card" id="non-profit Member">
+                <div class="member-card" id="non-profit-Member">
                     <h3>Non-Profit Member</h3>
                     <button id="learn-np-member" class="info-btn" data-modal="modal-np-member">Learn More</button>
                 </div>
-                <div class="member-card" id="Bronze Member">
+                <div class="member-card" id="Bronze-Member">
                     <h3>Bronze Member</h3>
                     <button id="learn-bronze-member" class="info-btn" data-modal="modal-bronze">Learn More</button>
                 </div>
-                <div class="member-card" id="Silver Member">
+                <div class="member-card" id="Silver-Member">
                     <h3>Silver Member</h3>
                     <button id="learn-silver-member" class="info-btn" data-modal="modal-silver">Learn More</button>
                 </div>
-                <div class="member-card" id="Gold Member">
+                <div class="member-card" id="Gold-Member">
                     <h3>Gold Member</h3>
                     <button id="learn-gold-member" class="info-btn" data-modal="modal-gold">Learn More</button>
                 </div>
