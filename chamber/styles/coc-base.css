@@ -151,6 +151,14 @@ dialog {
 dialog::backdrop {
     background-color: rgba(0, 0, 0, 0.4);
 }
+#desc-box {
+    width: 100%;
+    height: 5em;
+}
+#org-desc {
+    width: 100%;
+    height: 4em;
+}
 
 #comp-container {
     display: none;
