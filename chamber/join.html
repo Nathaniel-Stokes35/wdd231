@@ -86,61 +86,61 @@
             <form method="get" action="thankyou.html">
                 <div class="form-sect" id="nameplate">
                     <h2>Organization & Contact Info</h2>
-                    <div class="form-group">
-                        <label for="org-name">Organization Name:</label>
-                        <input type="text" name="org-name" id="org-name" placeholder="Organization Name..." autocomplete="organization" minlength="7" pattern="[A-Za-z0-9\- ]+" title="Must be at least 7 characters. Letters, numbers, hyphens, and spaces only." required>
-                    </div>
-                    <div class="form-group">
-                        <label for="first-name">First Name:</label>
-                        <input type="text" name="first-name" id="first-name" autocomplete="given-name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="last-name">Last Name:</label>
-                        <input type="text" name="last-name" id="last-name" autocomplete="family-name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="contact-email">Email:</label>
-                        <input type="email" name="contact-email" id="contact-email" placeholder="contact.name@Organization.com" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone-number">Phone Number:</label>
-                        <input type="tel" name="phone-number" id="phone-number" placeholder="1(417)555-5555" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="membership-level">Desired Membership Level:</label>
-                        <select id="membership-level" name="membership-level" required>
-                            <option value="" disabled selected>Choose Level...</option>
-                            <option value="NP-member">Non-Profit Member</option>
-                            <option value="bronze">Bronze</option>
-                            <option value="silver">Silver</option>
-                            <option value="gold">Gold</option>
-                        </select>
-                    </div>
-                    <div class="desc-box">
-                        <label for="org-desc">Organization Description:</label>
-                        <input type="text" name="org-desc" id="org-desc" placeholder="Organization Description">
-                    </div>
+                    <label for="org-name">Organization Name: 
+                        <input type="text" 
+                        name="org-name" 
+                        placeholder="Organization Name..." 
+                        autocomplete="organization" 
+                        id="org-name"
+                        title="What is the Name of the organization that wants to join?" 
+                        required>
+                    </label><br>
+                    <label for="org-title">Organization Title: 
+                        <input type="text" 
+                        name="org-name" 
+                        placeholder="Organization Title..." 
+                        autocomplete="organization-title" 
+                        id="org-title"
+                        minlength="7"
+                        pattern="[A-Za-z0-9\- ]+"
+                        title="Must be at least 7 characters. Letters, numbers, hyphens, and spaces only." 
+                        required>
+                    </label><br>
+                    <label for="first-name">First Name: <input type="text" name="first-name" placeholder="" id="first-name" autocomplete="given-name" title="First, or given, name of the contact person." required></label><br>
+                    <label for="last-name">Last Name: <input type="text" name="last-name" placeholder="" id="last-name" autocomplete="family-name" title="Last, or family, name of the contact person" required></label><br>
+                    <label for="contact-email">Email: <input type="email" name="contact-email" placeholder="contact.name@Organization.com" autocomplete="off" title="Contact email for newsletter and correspondance" id="contact-email" required></label><br>
+                    <label for="phone-number">Phone Number: <input type="tel" name="phone-number" placeholder="1(417)555-5555" id="phone-number" title="Contact phone number for advertising and correspondance" required></label><br>
+                    <label for="membership-level">Desired Membership Level:  
+                    <select id="membership-level" name="membership-level" title="Desired membership level, expected benefits and payment" required>
+                        <option value="" disabled selected>Choose Level...</option>
+                        <option value="NP-member">Non-Profit Member</option>
+                        <option value="bronze">Bronze</option>
+                        <option value="silver">Silver</option>
+                        <option value="gold">Gold</option>
+                    </select></label><br>
+                    <label for="org-desc" title="Description of Organization's goals and bussiness plan">Organization Description: <br>
+                    <textarea name="org-desc" id="org-desc" rows="4" cols="40"></textarea></label>
                     <input type="hidden" name="submittedDate" value="">
                 </div>
                 <div id="submit-div">
-                    <input type="submit" name="info-submit" value="Submit Info" class="submit-button">
+                    <label id="submit"><input type="submit" name="info-submit" value="Submit Info" class="submit-button"></label>
                 </div>
             </form>
             <div>
                 <div class="member-card" id="non-profit-Member">
-                    <label><h3>Non-Profit Member</h3></label>
+                    <h3>Non-Profit Member</h3>
                     <button id="learn-np-member" class="info-btn" data-modal="modal-np-member">Learn More</button>
                 </div>
                 <div class="member-card" id="Bronze-Member">
-                    <label><h3>Bronze Member</h3></label>
+                    <h3>Bronze Member</h3>
                     <button id="learn-bronze-member" class="info-btn" data-modal="modal-bronze">Learn More</button>
                 </div>
                 <div class="member-card" id="Silver-Member">
-                    <label><h3>Silver Member</h3></label>
+                    <h3>Silver Member</h3>
                     <button id="learn-silver-member" class="info-btn" data-modal="modal-silver">Learn More</button>
                 </div>
                 <div class="member-card" id="Gold-Member">
-                    <label><h3>Gold Member</h3></label>
+                    <h3>Gold Member</h3>
                     <button id="learn-gold-member" class="info-btn" data-modal="modal-gold">Learn More</button>
                 </div>
             </div>
