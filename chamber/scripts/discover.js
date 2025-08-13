@@ -8,7 +8,7 @@ fetch('./data/items.json')
     card.innerHTML = `
         <h2>${item.name}</h2>
         <figure>
-        <img src="${item.image}" alt="${item.name}" class="items-img" />
+        <img src="${item.image}" alt="${item.name}" class="items-img" loading="lazy"/>
         </figure>
         <address>${item.address}</address>
         <p>${item.description}</p>
