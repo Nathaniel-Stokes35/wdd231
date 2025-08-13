@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Big Sugar Creek Trails",
+        "address": "6727 Big Sugar Creek Road. Pineville, MO 64856",
+        "description": "Hike a trail back into history. Big Sugar Creek State Park is a rugged landscape of rare shrubs and trees not often seen anymore in Missouri. Visitors can find solitude in hiking through shady upland woodlands and sunny grassy glades while passing near numerous rock ledges. Notable plants such as the Ozark Chinquapin tree and low prickly pear cactus can be found along with animals such as armadillos and birds such as scarlet tanagers.",
+        "image": "./images/big-sugar-creek-trail.webp"
+    },
+    {
+        "name": "Bluff Dwellers Cave",
+        "address": "163 Cave Rd, Noel, MO 64854",
+        "description": "Bluff Dwellers Cave is decorated with stalactites, stalagmites, draperies, saw tooth drapes, flowstone, cave popcorn, cave coral, and cave sponge and more. Your tour guide will show you the beautiful calcite formations that were delicately formed over thousands of years, unhampered by the chaotic life of the surface world. Come enjoy the tranquility of cave life, where geology takes time to get everything just right. Guided tour is 1 hour long. Gem panning, museum and gift shop on premises. Last tour departs 1 hour before close.",
+        "image": "./images/bluff-dwellers-cave-main-room.webp"
+    },
+    {
+        "name": "Honeypops Bar & Grill",
+        "address": "45 Fashion Ln, Anderson, MO 64831",
+        "description": "Experience the perfect blend of historic charm and modern dining at HoneyPop's Bar & Grill. Nestled beside a serene river stream in the heart of Anderson, our lovingly restored two-story restaurant offers an elevated steakhouse-themed menu, exclusive signature dishes, and a warm, welcoming atmosphere.",
+        "image": "./images/honey-pops-deck.webp"
+    },
+    {
+        "name": "Huckleberry Ridge Campgrounds",
+        "address": "2012 Packet Hollow Rd, Pineville, MO 64856",
+        "description": "Huckleberry Ridge Conservation Area is on the edge of the range for shortleaf pine, Missouri's only native pine. The species used to be more abundant. In fact, the nearby community of Pineville was named for the abundance of pines in the nearby hills at the time of settlement. Indiscriminate cutting in the 1800's and past land use practices have significantly reduced the occurrence of short leaf pine in this region of Missouri.",
+        "image": "./images/huckleberry-ridge-camping.webp"
+    },
+    {
+        "name": "McDonald County Historical Society",
+        "address": "302 Harmon St, Pineville, MO 64856",
+        "description": "McDonald County is located in the extreme southwest corner of Missouri bordering Oklahoma and Arkansas. The County has a proud history rich in pioneer spirit and American values. The mission of the McDonald County Historical Society is to preserve the County's history by documenting, researching, and sharing information, data, and research with the public.",
+        "image": "./images/mcdonald-historical.webp"
+    },
+    {
+        "name": "Pineville Bowling",
+        "address": "13765 US-71, Pineville, MO 64856",
+        "description": "Whether you're a seasoned bowler or just trying it for the first time, you'll have a blast at Pineville Bowl. The lanes are well maintained and the staff is always friendly and helpful. Plus, there's nothing quite like enjoying a delicious burger and fries after a few games of bowling.",
+        "image": "./images/pineville-bowl.webp"
+    },
+    {
+        "name": "River Ranch Resort on the Elk River",
+        "address": "101 River Rd, Noel, MO 64854",
+        "description": "We've been spoiling our guests since 1980, don't you deserve to be next? Our campground sits upon the beautiful Elk River in Southwest Missouri, making camping, lodging, and floating as premiere as it gets! Apart from getting exceptional outdoor experiences paired with our professional customer care… You will be leaving here with everlasting memories and the desire to come back for more!",
+        "image": "./images/river-ranch.webp"
+    },
+    {
+        "name": "The Flick Movie Theater",
+        "address": "105 W Main St, Anderson, MO 64831",
+        "description": "We are a family-owned theatre focused on a family atmosphere and are here to bring the family enjoyment of a movie night without the cost of bigger theatres. We have excellent refreshments that are reasonably priced. Our theatre is fully digital with Dolby Digital Surround Sound.  We have one of the largest screens in the area, with a seating capacity of 206. We serve not only the Anderson, Missouri area but Neosho, Noel, along with other nearby cities.  Because of our reasonable prices, people come from Bella Vista, Arkansas, and even Bentonville.",
+        "image": "./images/the-flick-theater.webp"
+    }
+]

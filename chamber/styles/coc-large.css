@@ -37,7 +37,11 @@
         padding: 1rem;
         min-height: 100px;
     }
-
+    #items-card-gallary {
+        grid-template-areas:
+        "card1 card2 card3 card4"
+        "card5 card6 card7 card8";
+    }
     .dir-main {
         display:block;
     }

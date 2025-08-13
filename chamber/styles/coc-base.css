@@ -209,6 +209,17 @@ h1, h2, h3, h4, p, strong, em {
 main {
     display: block;
 }
+
+.visit-message {
+  background-color: var(--highlight-bg);
+  color: var(--text-color);
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
 #hero-img {
     width: 100%;
 }
@@ -510,6 +521,36 @@ button.active .status {
     background-color: var(--container-bg);
     color: var(--bg-color);
 }
+#items-card-gallary {
+    display: grid;
+    grid-template-areas:
+        "card1"
+        "card2"
+        "card3"
+        "card4"
+        "card5"
+        "card6"
+        "card7"
+        "card8";
+}
+@media(min-width: 641px) {
+    #items-card-gallary {
+        grid-template-areas:
+        "card1 card2"
+        "card3 card4"
+        "card5 card6"
+        "card7 card8";
+    }
+}
+.card {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.items-img {
+    width: 300px;
+}
+
 footer{
     background-color: var(--footer-bg);
     padding: 0.2vw 0 0.2vw 1vw;
@@ -538,3 +579,12 @@ footer{
 .icon:hover {
   color: var(--accent-color);
 }
+
+.card:nth-child(1) { grid-area: card1; }
+.card:nth-child(2) { grid-area: card2; }
+.card:nth-child(3) { grid-area: card3; }
+.card:nth-child(4) { grid-area: card4; }
+.card:nth-child(5) { grid-area: card5; }
+.card:nth-child(6) { grid-area: card6; }
+.card:nth-child(7) { grid-area: card7; }
+.card:nth-child(8) { grid-area: card8; }
