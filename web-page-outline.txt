@@ -1,0 +1,10 @@
+Portfolio Page
+- Home Page
+	Navigation page to filter goals of the user
+- Job History 
+	outlines my assorted jobs, skills learned, dates, and next steps | 5 jobs (Braums -> State Farm)
+- Projects
+	outlines purpose, goals, evaluation tools, and results | 6 Projects
+- Personality "About Me" Page
+	outlines who I am as a person, what my aspirations are and personal projects/hobbies I am working on and why
+	4 Personality aspects / Personal Projects
