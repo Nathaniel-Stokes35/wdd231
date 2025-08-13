@@ -212,6 +212,7 @@ h1, h2, h3, h4, p, strong, em {
 
 main {
     display: block;
+    align-items: center;
 }
 
 .visit-message {
@@ -556,7 +557,8 @@ button.active .status {
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 300px;
+    width: 290px;
+    overflow: hidden;
 }
 .items-img {
     width: 300px;
