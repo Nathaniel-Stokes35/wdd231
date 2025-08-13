@@ -42,6 +42,12 @@
         "card1 card2 card3 card4"
         "card5 card6 card7 card8";
     }
+    #items-card-gallary img {
+        transition: transform 0.3s ease; 
+    }
+    #items-card-gallary img:hover {
+        transform: scale(1.1); 
+    }
     .dir-main {
         display:block;
     }
