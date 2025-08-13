@@ -14,6 +14,7 @@
   --title-bg: #00FFC0;
   --hero-btn: rgba(0,0,0,0.3);
   --highlight-bg: #FFFF97;
+  --btn-color: rgba(4,4,4,0.2);
 }
 
 body.night {
@@ -32,6 +33,7 @@ body.night {
   --title-bg: #202020;
   --hero-btn: rgba(200, 200, 200, 0.3);
   --highlight-bg: #391110;
+  --btn-color: white;
 }
 
 body { 
@@ -116,6 +118,8 @@ header img {
 header span {
     font-size: 1.2rem;
     color: var(--text-color);
+    margin-bottom: 10rem;
+    text-align: center;
 }
 .hamburger {
     background: none;
@@ -261,7 +265,13 @@ main {
     justify-content: space-between;
 }
 #view-btns button {
+    background-color: var(--btn-color);
     transition: background-color 0.2s ease;
+    width: 90px;
+    padding: 0;
+}
+#view-btns button:hover {
+    background-color: var(--highlight-bg);
 }
 #grid-btn {
     justify-content: flex-start;
@@ -546,6 +556,7 @@ button.active .status {
     justify-content: center;
     align-items: center;
     text-align: center;
+    width: 300px;
 }
 .items-img {
     width: 300px;
