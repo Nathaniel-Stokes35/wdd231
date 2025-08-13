@@ -1,0 +1,48 @@
+@media only screen and (min-width: 1100px) {    
+    header, main, nav, footer {
+        width: 1100px;
+        display: block;
+    }
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+    header #port-logo-svg {
+        height: 20vh;
+    }
+    .hamburger {
+        display: none;
+    }
+    .navigation {
+        display: block;
+        border-bottom: solid 1px var(--border);
+    }
+    .navigation ul {
+        display: flex;
+    }
+    .navigation li {
+        width: 25%;
+        border-radius: 10px;
+    }
+    .navigation a {
+        border: none;
+        display: block;
+        text-align: center;
+        padding: 10px 15px;
+        box-sizing: border-box;
+        text-decoration: none;
+    }
+    ul.skills {
+        grid-template-areas:
+        "job1 job2 job3 job4"
+        "job5 job6 job6 job7";
+    }
+    .carousel-btn {
+        position: absolute;
+        top: 60%;
+        width: 5%;
+    }
+    footer {
+        padding: 5vh;
+    }
+}

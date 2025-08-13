@@ -1,0 +1,26 @@
+[
+  {
+    "button-title": "Download",
+    "link": "documents/Nathaniel-Stokes-Resume.pdf",
+    "title": "My Resume",
+    "dateTaken": "2025-07-05",
+    "fileSize": "99 KB",
+    "description": "Complete downloadable resume detailing experience, skills, and education."
+  },
+  {
+    "button-title": "Contact Form",
+    "link": "thank-you.html",
+    "title": "Contact Me",
+    "dateTaken": "2025-08-13",
+    "fileSize": "Max: 2000 characters",
+    "description": "For project inquiries, opportunities, or questions, please use this form."
+  },
+  {
+    "button-title":"Chat with me on Discord!",
+    "link": "https://discord.com/users/539550923022794766",
+    "title": "Nathaniel Stokes",
+    "dateTaken": "2025-08-13",
+    "fileSize": "",
+    "description": "Analytical, creative, and detail-oriented problem solver who enjoys exploring deep, meaningful, concepts and ideas."
+  }
+]

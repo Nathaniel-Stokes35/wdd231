@@ -1,0 +1,34 @@
+[
+    {
+        "title":"Home",
+        "name":"Navigation HUB Page",
+        "description":"Simple webpage UI to navigate between the different pages for exploring my experience, skills, and character. Designed as the welcome page to introduce the basic elements to help you come to get and know me faster and easier. Take your time and enjoy, if you have any questions or would like to get in touch, the information at the bottom outlines the best wasy to get a hold of me.",
+        "purpose":"Landing page to improve your experience and express my professionalism and skills, practically.",
+        "link":"index.html",
+        "image":"./images/home-preview.png"
+    },
+    {
+        "title":"Jobs",
+        "name":"Job Experience Page",
+        "description":"Outlining a collection of relevant positions I have held; the dates I was in those positions, my responsibilities and achievements, and what skills I developed to acomplish those goals.",
+        "purpose":"Provide meaningful insights into my professional background and experience.",
+        "link":"jobs.html",
+        "image":"./images/jobs-preview.png"
+    },
+    {
+        "title":"Projects",
+        "name":"GitHub Hosted Projects Page",
+        "description":"Hosting several Data Science related jupyter notebooks; illustrating their respective enviroments and purpose, the objectives of the analysis and model use, the results of each model, and the suggested actions to take based on the finidings given.",
+        "purpose":"Showcasing my approach to problem solving, my skills in Machine Learning and Exploratory Data Analysis, and expressing my apptitude for presenting information in easy to understand direct communication.",
+        "link":"projects.html",
+        "image":"./images/projects-preview.png"
+    },
+    {
+        "title":"About Me",
+        "name":"Personal About Page",
+        "description":"Providing clear expressions of who I am as an individual, where my values are, my personal projects and ideas, and what you should expect while working with me. This page is an in-depth view of who I am and a metric to how I can benefit and bolster your team.",
+        "purpose":"A transparent view of what you should expect from me and where I would like to go.",
+        "link":"about.html",
+        "image":"./images/about-preview.png"
+    }
+]

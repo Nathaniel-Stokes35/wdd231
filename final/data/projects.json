@@ -1,0 +1,169 @@
+[
+    {
+        "title": "Integrated Project 1: ESRB Game Sales EDA",
+        "type": "Exploratory Data Analysis",
+        "description": "Analyzed ESRB-rated video game sales from 2010–2016 to identify platform and genre trends for predicting 2017 marketing priorities. Compared user and critic review scores against sales, segmented by platform, genre, and region. Built visualizations to explore correlations, market share, and regional profiling.",
+        "tools": [
+        "Python",
+        "pandas",
+        "numpy",
+        "matplotlib",
+        "seaborn",
+        "Jupyter Notebook"
+        ],
+        "metrics": {
+        "user_score_sales_corr": 0.31,
+        "critic_score_sales_corr": 0.37,
+        "top_na_platforms": ["Xbox 360", "PlayStation 3", "Wii", "PlayStation 4", "Xbox One"],
+        "top_genres": ["Action", "Shooter", "Sports", "Misc", "Role-Playing"],
+        "hypothesis_tests": [
+            "Avg user ratings between Xbox One and PC (fail to reject H₀)",
+            "Avg user ratings between Action and Sports genres (reject H₀)"
+        ]
+        },
+        "conclusion": "Focus marketing efforts on AAA Action and Shooter titles for Xbox One and PlayStation 4 in North America. In Europe, prioritize well-known, family-friendly Sony titles in the Action category. Minimize investment in Japan-focused releases due to consistently low sales volume.",
+        "score": "Model correlations indicate weak-to-moderate relationship between review scores and sales; strategic targeting improves potential ROI.",
+        "image": "project1-esrb-eda-thumb.png",
+        "link": "https://github.com/Nathaniel-Stokes35/portfolio/blob/main/projects/TripleTen/GameTrendAnalysis.ipynb"
+    },
+    {
+        "title": "Insurance Claims ML Project",
+        "type": "Machine Learning / Data Analysis",
+        "description": "Developed and evaluated machine learning models for an insurance company to identify similar customers, predict benefit likelihood, forecast claim counts, and test privacy-preserving data transformations.",
+        "long_description": "This project for Sure Tomorrow Insurance tackled four main tasks: (1) Find similar customers using k-Nearest Neighbors (kNN) to assist marketing segmentation; (2) Classify whether a new customer would likely receive an insurance benefit, comparing kNN to a dummy baseline; (3) Predict the number of benefits a customer might receive using a Linear Regression model; and (4) Implement a reversible, privacy-preserving data obfuscation method that leaves model predictions unchanged. Data preprocessing involved scaling (MaxAbsScaler), exploratory descriptive statistics, and correlation insights revealing income scale dominance pre-scaling. kNN performance improved dramatically with scaling (F1 up to ~0.85 vs ~0.01 unscaled). Linear Regression achieved RMSE ~0.34 and R² ~0.66 on both scaled and obfuscated data, proving obfuscation did not degrade quality. Conclusions highlighted the role of age as a major determinant of benefit likelihood and established a replicable pipeline for analysis, modeling, and secure data transformation.",
+        "tools": [
+            "Python",
+            "pandas",
+            "numpy",
+            "scikit-learn",
+            "matplotlib",
+            "seaborn",
+            "Jupyter Notebook"
+        ],
+        "metrics": {
+            "knn_f1_scaled_best": 0.85,
+            "knn_f1_unscaled_best": 0.01,
+            "linear_regression_rmse": 0.34,
+            "linear_regression_r2": 0.66,
+            "top_features": ["Age", "Previous Insurance Benefits", "Income", "Family Members"],
+            "obfuscation_effect": "No change in RMSE or R²; predictions identical before and after transformation"
+        },
+        "conclusion": "Scaling features significantly improves similarity search and classification precision. Age is the dominant factor in benefit likelihood, with higher-age groups more at risk. Linear Regression predictions are unaffected by privacy-preserving obfuscation, enabling secure model deployment.",
+        "score": "Linear Regression RMSE: 0.34, R²: 0.66 — scaled kNN F1 up to 0.85 vs 0.01 unscaled",
+        "image": "insurance-claims-ml-thumb.png",
+        "link": "https://github.com/Nathaniel-Stokes35/portfolio/blob/main/projects/TripleTen/InsuranceCustomerML.ipynb"
+    },
+    {
+        "title": "Discovering InterConnect Churn",
+        "type": "Machine Learning / Customer Analytics",
+        "description": "Built an XGBoost-based churn prediction model for an ISP, classifying active subscribers into five churn risk levels using integrated contract, service, and demographic data.",
+        "long_description": "This project merged four separate datasets (contract, internet, phone, and customer information) into a unified, clean feature set for churn modeling at InterConnect. Steps included transformation of skewed features (log-transform of TotalCharges), creation of tenure-based fields, and encoding of categorical variables. The work plan included splitting data into train/validation/test, tuning XGBoost with randomized search, and using SHAP values for interpretability. The model outputs risk tiers: Very Small Risk, Small Risk, Moderate Risk, High Risk, and Very High Risk based on predicted churn probability. Key insights: Tenure was the strongest churn predictor, followed by payment method, contract type, monthly charges, and service bundle features. Customers with one-year/two-year contracts and high tenure were less likely to churn; fiber optic customers and month-to-month subscribers had higher risk if tenure was short. Recommendations included targeted loyalty programs and incentives for mid‑contract customers to commit to longer terms, especially those in higher‑risk tiers.",
+        "tools": [
+            "Python",
+            "pandas",
+            "numpy",
+            "XGBoost",
+            "scikit-learn",
+            "matplotlib",
+            "seaborn",
+            "SHAP",
+            "Jupyter Notebook"
+        ],
+        "metrics": {
+            "model_type": "XGBoost Classifier",
+            "top_features": ["Tenure", "TotalCharges", "PaymentMethod", "ContractType", "MonthlyCharges", "InternetService", "MultipleLines"],
+            "risk_levels": ["Very Small Risk", "Small Risk", "Moderate Risk", "High Risk", "Very High Risk"],
+            "transformation": "Logarithmic scaling of TotalCharges to reduce skew",
+            "interpretability": "SHAP values used to explain feature importance"
+        },
+        "conclusion": "Tenure is the dominant churn determinant; month-to-month and short-tenure fiber optic customers are at highest risk. Recommend implementing loyalty incentives for one-year/two-year customers approaching renewal, focusing marketing on retaining high-revenue, mid-tenure clients.",
+        "score": "XGBoost churn classifier with SHAP explanations; tenure emerged as top driver, with clear separation across five risk tiers",
+        "image": "interconnect-churn-thumb.png",
+        "link": "https://github.com/Nathaniel-Stokes35/portfolio/blob/main/projects/TripleTen/InterConnectChurn.ipynb"
+    },
+    {
+        "title": "Creating and Testing a Bank Model for Leaving Customers",
+        "type": "Machine Learning / Classification",
+        "description": "Compared multiple models to predict bank customer churn, selecting an unprocessed Random Forest as the best performer after testing Decision Tree, Logistic Regression, and processed variations.",
+        "long_description": "This project explored predictive modeling for bank customer churn using three main algorithms: Decision Tree, Random Forest, and Logistic Regression. The workflow began with feature engineering — adding a 'Tenure_missing' indicator, imputing missing Tenure values by country mean, and encoding categorical variables. The dataset was split into training (70%), validation (15%), and test (15%) sets. Models were tested using both raw, unprocessed features and scaled/polynomial‐expanded features to examine performance differences.\n\nThe Decision Tree showed stronger performance on raw data (F1 ≈ 0.63, AUC ≈ 0.78), but suffered from overprocessing. Random Forest proved robust to scaling and feature expansion, with the unprocessed variant scoring best (F1 ≈ 0.59, AUC ≈ 0.84 on validation). Logistic Regression lagged behind, maxing out near F1 ≈ 0.53. Feature importance in the winning Random Forest highlighted age and financial health metrics (balance, credit score, estimated salary) as the strongest churn predictors.\n\nRecommendations from the analysis included developing customer retention programs that improve financial engagement, and marketing communications emphasizing the security and reliability of bank products to at‐risk segments identified by the model.",
+        "tools": [
+            "Python",
+            "pandas",
+            "numpy",
+            "scikit-learn",
+            "matplotlib",
+            "seaborn",
+            "Jupyter Notebook"
+        ],
+        "metrics": {
+            "models_tested": ["Decision Tree", "Random Forest", "Logistic Regression"],
+            "decision_tree_f1_auc": [0.63, 0.78],
+            "random_forest_f1_auc": [0.59, 0.84],
+            "logistic_regression_f1": 0.53,
+            "best_model": "Random Forest (unprocessed features)",
+            "top_features": ["Age", "Balance", "CreditScore", "EstimatedSalary", "NumOfProducts"]
+        },
+        "conclusion": "Unprocessed Random Forest model handled churn classification most effectively, identifying age and financial health as key churn drivers. Recommend targeted retention strategies focusing on strengthening customer financial engagement and reinforcing perceived value of services for high‐risk clients.",
+        "score": "Random Forest (unprocessed) — F1: 0.59, AUC: 0.84 on validation set",
+        "image": "bank-churn-thumb.png",
+        "link": "https://github.com/Nathaniel-Stokes35/portfolio/blob/main/projects/TripleTen/beta_bank_churn_model.ipynb"
+    },
+    {
+        "title": "Mineral Processing and Recovery Machine Model",
+        "type": "Machine Learning / Regression",
+        "description": "Developed and evaluated multiple regression models to predict gold recovery in mineral processing, with robust preprocessing, feature engineering, and anomaly detection to ensure high-quality data.",
+        "long_description": "This Zyfra project focused on predicting gold recovery rates from mineral processing plant data, using training, test, and full datasets. Key preprocessing steps included imputation of missing values (fit on training set to prevent leakage), total concentration calculations for key metals (gold, silver, lead) across multiple processing stages, and anomaly detection via the IQR method to address outliers. Extreme outliers in calculated recovery were capped, achieving a nominal Mean Absolute Error just over 4% between calculated and measured recovery.\n\nModels tested included Linear Regression (baseline), Random Forest Regressor, Ridge Regression, and Lasso Regression, evaluated with cross-validation using the sMAPE metric. Random Forest revealed `rougher.input.feed_au` and `rougher.input.floatbank10_sulfate` as top predictors, while LassoCV ultimately produced the best sMAPE, indicating it effectively identified and excluded noisy features.\n\nThis work demonstrates deep preprocessing rigor, interpretable modeling, and a data-driven pipeline that can be deployed to optimize recovery processes and eliminate unprofitable operational parameters, aligning with industrial performance goals.",
+        "tools": [
+            "Python",
+            "pandas",
+            "numpy",
+            "scikit-learn",
+            "matplotlib",
+            "seaborn",
+            "Jupyter Notebook"
+        ],
+        "metrics": {
+            "baseline_linear_regression_smape": 11.28,
+            "random_forest_top_features": [
+            "rougher.input.feed_au",
+            "rougher.input.floatbank10_sulfate"
+            ],
+            "random_forest_notes": "Captured nuanced variance, aligned with known process chemistry",
+            "ridge_cv_notes": "Marginally better than baseline; limited deeper insights",
+            "lasso_cv_notes": "Best sMAPE; pruned noisy features to improve prediction",
+            "outlier_mae_diff_percent": 4.0
+        },
+        "conclusion": "Comprehensive preprocessing and model evaluation identified LassoCV as the optimal predictor for gold recovery, leveraging strong correlations while removing noisy features. Implementation can guide process optimization and cost reduction.",
+        "score": "LassoCV achieved best cross-validated sMAPE, outperforming Random Forest and baseline models",
+        "image": "mineral-processing-thumb.png",
+        "link": "https://github.com/Nathaniel-Stokes35/portfolio/blob/main/projects/TripleTen/gold_recovery_data_preprocessing.ipynb"
+    },
+    {
+        "title": "Analyzing Oil Regions and Selecting the Most Profitable Locations",
+        "type": "Machine Learning / Regression & Profitability Analysis",
+        "description": "Modeled oil well reserves across three regions to identify the most profitable set of 200 wells, applying regression, bootstrapping, and cost–profit analysis for strategic site selection.",
+        "long_description": "For OilyGiant Mining Company, this project analyzed 500 potential well sites per region to narrow selection to the top 200 within the most profitable region. Data exploration revealed strong regional differences in production potential and feature distributions, particularly the influence of feature f2 in Region 1. A Linear Regression model (with testing/training split 25/75) was fitted for each region, evaluating RMSE and reserve volume predictions. Attempts to reduce RMSE for Regions 0 and 2 included bootstrapping, cross-validation, RidgeCV, and LassoCV, with minimal improvement.\n\nProfitability analysis calculated break-even reserve volumes per well, compared against predicted outputs, and used 1,000-round bootstrapping to estimate profit confidence intervals for each region. Despite Region 1 having the lowest RMSE and safest predictions, Region 2 (third dataset) emerged as the most profitable—achieving a 95% confidence interval of at least $70M profit, surpassing other regions by over $4M. Recommendations prioritized development in Region 2, balancing slightly higher predictive variance against significantly higher profit potential.",
+        "tools": [
+            "Python",
+            "pandas",
+            "numpy",
+            "scikit-learn",
+            "matplotlib",
+            "seaborn",
+            "Jupyter Notebook"
+        ],
+        "metrics": {
+            "models_used": ["Linear Regression", "RidgeCV", "LassoCV"],
+            "rmse_region0": "High (~46, variable)",
+            "rmse_region1": "0.71% error, 0.58% prediction inaccuracy",
+            "rmse_region2": "Similar to Region 0 (~46)",
+            "bootstrap_rounds": 1000,
+            "bootstrap_confidence_interval": "95% CI ≥ $70M (Region 2)",
+            "top_region_profit_advantage": "$4M+ over other regions"
+        },
+        "score": "Region 2 predicted profit ≥ $70M with 95% confidence, $4M+ higher than alternatives",
+        "conclusion": "While Region 1 offered the lowest predictive error, analysis showed Region 2 delivers the highest expected profit. Selecting it maximizes revenue potential while maintaining acceptable risk levels. Recommended for well construction investment.",
+        "image": "oil-regions-profitability-thumb.png",
+        "link": "https://github.com/Nathaniel-Stokes35/portfolio/blob/main/projects/TripleTen/oil_well_location_optimization.ipynb"
+    }
+]

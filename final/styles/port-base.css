@@ -1,0 +1,322 @@
+:root {
+  --bg-color: #FAFAFA;
+  --text-color: #0a0a0a;
+  --accent-color: #0A5C5C;
+  --link-color: #20204A;
+  --visited-color: #350000;
+  --hover-color: #C4C4C5;
+  --footer-bg: #B4B4B5;
+  --container-bg: #9CFEF0;
+  --sub-bg: #10B981;
+  --sub-text: #444445;
+  --border: #202020;
+  --btn-hover: #A0A0A0;
+  --title-bg: #00FFC0;
+  --hero-btn: rgba(0,0,0,0.3);
+  --highlight-bg: #FFFF97;
+  --btn-color: rgba(4,4,4,0.2);
+}
+
+body.night {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --accent-color: #A0F9F1;
+  --link-color: #A0FFA0;
+  --visited-color: #80f0ff;
+  --hover-color: #333333;
+  --footer-bg: #1e1e1e;
+  --container-bg: #3A3A3A;
+  --sub-bg: #B3D6E1;
+  --sub-text: #cccccc;
+  --border: #E0E0E0;
+  --btn-hover: #A0A0A0;
+  --title-bg: #202020;
+  --hero-btn: rgba(200, 200, 200, 0.3);
+  --highlight-bg: #391110;
+  --btn-color: white;
+}
+body {
+    background-color: var(--bg-color);
+}
+header, main, nav, footer {
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+h2, h3, h4, p, label, a {
+    color: var(--text-color);
+}
+a:visited {
+    color: var(--visited-color);
+}
+
+h1 {
+    color: var(--text-color);
+    width: 100%;
+    text-align: center;
+}
+header {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+#port-logo-svg {
+    fill: var(--text-color);
+    width: 100%;
+}
+.hamburger {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.hamburger::before {
+    content: "\2630"; /* hamburger */
+}
+.hamburger.show::before {
+    content: "\00D7"; /* X */
+}
+
+.navigation{
+    display: none;
+}
+.navigation.show {
+    display: block;
+}
+.navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.navigation li.current {
+    background-color: var(--accent-color);
+}
+.navigation li:hover {
+    background-color: var(--hover-color);
+}
+.navigation li:hover a {
+    color: var(--visited-color);
+}
+.navigation a {
+    color: var(--link-color);
+}
+.navigation a:visited {
+    color: var(--visited-color);
+}
+.current a {
+    color: var(--highlight-bg);
+}
+.current a:visited {
+    color: var(--highlight-bg);
+}
+
+.visit-message {
+    background-color: var(--highlight-bg);
+    color: var(--text-color);
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  transition: opacity 0.3s ease;
+}
+
+.modal[hidden] {
+  display: flex; 
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal-content {
+  background: var(--container-bg);
+  border-radius: 8px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  transform: translateY(-150%); 
+  transition: transform 0.4s ease;
+}
+
+.modal:not([hidden]) .modal-content {
+  transform: translateY(0);
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;  
+  padding: 1rem;
+  color: var(--text-color);
+}
+
+.modal-header h2 {
+  font-size: 1.25rem;
+  margin: 0;
+  flex: 1;
+}
+
+.modal ul {
+    list-style-type: none;
+    padding: 1rem;
+}
+
+.modal li {
+    color: var(--text-color);
+}
+
+.submit-button {
+    padding:0.5rem;
+    border-radius: 10px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+.submit-button:hover {
+    background-color: var(--highlight-bg);
+}
+
+#contactMessage {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--text-color);
+  cursor: pointer;
+  margin-left: 1rem;
+  flex-shrink: 0;
+}
+
+
+.carousel-track-container {
+  overflow: hidden;
+  width: 100%; 
+  position: relative;
+  padding-bottom: 1rem;
+}
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+  will-change: transform;
+}
+.page-card {
+  flex: 0 0 100%; 
+  box-sizing: border-box;
+  background-color: var(--container-bg);
+  border-radius: 24px;
+  padding:1rem;
+}
+
+ul.skills {
+    display: grid;
+    grid-template-areas:
+        "job1"
+        "job2"
+        "job3"
+        "job4"
+        "job5"
+        "job6"
+        "job7";
+  gap: 8px 12px;
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+@media(min-width: 641px) {
+    ul.skills {
+        grid-template-areas:
+        "job1 job2"
+        "job3 job4"
+        "job5 job6"
+        "job7 job7";
+    }
+}
+
+ul.skills li {
+  background-color: var(--sub-bg);
+  border-radius: 4px;
+  padding: 6px 10px;
+  font-size: 0.9rem;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.carousel-btn {
+    transform: translateY(-50%);
+    background: var(--accent-color);
+    color: var(--highlight-bg);
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    z-index: 1;
+    width: 100%;
+    border-radius: 10px;
+}
+.carousel-btn:hover {
+    background-color: var(--btn-hover);
+    color: var(--accent-color);
+}
+
+.carousel-btn.prev {
+    left: 0.5rem;
+}
+
+.carousel-btn.next {
+    right: 0.5rem;
+}
+
+button {
+    padding:0.5rem;
+    border-radius: 10px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+button:hover {
+    background-color: var(--highlight-bg);
+}
+
+footer{
+    background-color: var(--footer-bg);
+    padding: 0.2vw 0 0.2vw 1vw;
+    align-items: center;
+    border-radius: 20px;
+    width: 100%;
+}
+.social-links {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.icon {
+  color: var(--link-color);
+}
+.icon:hover {
+  color: var(--accent-color);
+}
+
+.skills li:nth-child(1) { grid-area: job1; }
+.skills li:nth-child(2) { grid-area: job2; }
+.skills li:nth-child(3) { grid-area: job3; }
+.skills li:nth-child(4) { grid-area: job4; }
+.skills li:nth-child(5) { grid-area: job5; }
+.skills li:nth-child(6) { grid-area: job6; }
+.skills li:nth-child(7) { grid-area: job7; }
