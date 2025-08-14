@@ -30,7 +30,7 @@
         <script src="scripts/port-main.js" defer></script>
         <script src="scripts/port-jobs.js" defer></script>
     </head>
-    <body class="home">
+    <body>
         
         <header>
             <svg id="port-logo-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -772,15 +772,15 @@
                     <h2 id="jobModalTitle"></h2>
                     <button class="close-btn" aria-label="Close">&times;</button>
                     </section>
-                    <div class="modal-body">
-                    <img id="jobModalImage" src="./images/missing-image.avif" alt="missing image" loading="lazy" class="facility-image">
-                    <p id="jobModalAddress"></p>
-                    <p id="jobModalPhone"></p>
-                    <p><a id="jobModalLink" href="#" target="_blank">Visit Website</a></p>
+                    <div>
+                        <img id="jobModalImage" src="./images/missing-image.avif" alt="missing image" loading="lazy" class="facility-image">
+                        <p id="jobModalAddress"></p>
+                        <p id="jobModalPhone"></p>
+                        <p><a id="jobModalLink" href="#" target="_blank">Visit Website</a></p>
                     </div>
                 </div>
             </div>
-            <div class="carousel">
+            <div>
                 <button class="carousel-btn prev" aria-label="Previous Page">&#10094;</button>
                 <div class="carousel-track-container">
                     <div class="carousel-track" id="pages-track"></div>
@@ -814,7 +814,7 @@
             <div>
                 <p id="copyright">&copy; <span id="curr-year"></span> &#x2022; Nathaniel Stokes &#x2022; Missouri, USA</p>
                 <p id="last-mod"></p>
-                <button class="port-btn" id="day-btn">(Light / Dark) Mode Toggle</button>
+                <button id="day-btn">(Light / Dark) Mode Toggle</button>
             </div>
             <section>
                 <h4>Contact Information</h4>
