@@ -23,7 +23,7 @@
         },
         "conclusion": "Focus marketing efforts on AAA Action and Shooter titles for Xbox One and PlayStation 4 in North America. In Europe, prioritize well-known, family-friendly Sony titles in the Action category. Minimize investment in Japan-focused releases due to consistently low sales volume.",
         "score": "Model correlations indicate weak-to-moderate relationship between review scores and sales; strategic targeting improves potential ROI.",
-        "image": "project1-esrb-eda-thumb.png",
+        "image": "project1-esrb-eda-thumb.webp",
         "link": "https://github.com/Nathaniel-Stokes35/portfolio/blob/main/projects/TripleTen/GameTrendAnalysis.ipynb"
     },
     {
@@ -50,7 +50,7 @@
         },
         "conclusion": "Scaling features significantly improves similarity search and classification precision. Age is the dominant factor in benefit likelihood, with higher-age groups more at risk. Linear Regression predictions are unaffected by privacy-preserving obfuscation, enabling secure model deployment.",
         "score": "Linear Regression RMSE: 0.34, R²: 0.66 — scaled kNN F1 up to 0.85 vs 0.01 unscaled",
-        "image": "insurance-claims-ml-thumb.png",
+        "image": "insurance-claims-ml-thumb.webp",
         "link": "https://github.com/Nathaniel-Stokes35/portfolio/blob/main/projects/TripleTen/InsuranceCustomerML.ipynb"
     },
     {
@@ -78,7 +78,7 @@
         },
         "conclusion": "Tenure is the dominant churn determinant; month-to-month and short-tenure fiber optic customers are at highest risk. Recommend implementing loyalty incentives for one-year/two-year customers approaching renewal, focusing marketing on retaining high-revenue, mid-tenure clients.",
         "score": "XGBoost churn classifier with SHAP explanations; tenure emerged as top driver, with clear separation across five risk tiers",
-        "image": "interconnect-churn-thumb.png",
+        "image": "interconnect-churn-thumb.webp",
         "link": "https://github.com/Nathaniel-Stokes35/portfolio/blob/main/projects/TripleTen/InterConnectChurn.ipynb"
     },
     {
@@ -105,7 +105,7 @@
         },
         "conclusion": "Unprocessed Random Forest model handled churn classification most effectively, identifying age and financial health as key churn drivers. Recommend targeted retention strategies focusing on strengthening customer financial engagement and reinforcing perceived value of services for high‐risk clients.",
         "score": "Random Forest (unprocessed) — F1: 0.59, AUC: 0.84 on validation set",
-        "image": "bank-churn-thumb.png",
+        "image": "bank-churn-thumb.webp",
         "link": "https://github.com/Nathaniel-Stokes35/portfolio/blob/main/projects/TripleTen/beta_bank_churn_model.ipynb"
     },
     {
@@ -135,7 +135,7 @@
         },
         "conclusion": "Comprehensive preprocessing and model evaluation identified LassoCV as the optimal predictor for gold recovery, leveraging strong correlations while removing noisy features. Implementation can guide process optimization and cost reduction.",
         "score": "LassoCV achieved best cross-validated sMAPE, outperforming Random Forest and baseline models",
-        "image": "mineral-processing-thumb.png",
+        "image": "mineral-processing-thumb.webp",
         "link": "https://github.com/Nathaniel-Stokes35/portfolio/blob/main/projects/TripleTen/gold_recovery_data_preprocessing.ipynb"
     },
     {
@@ -163,7 +163,7 @@
         },
         "score": "Region 2 predicted profit ≥ $70M with 95% confidence, $4M+ higher than alternatives",
         "conclusion": "While Region 1 offered the lowest predictive error, analysis showed Region 2 delivers the highest expected profit. Selecting it maximizes revenue potential while maintaining acceptable risk levels. Recommended for well construction investment.",
-        "image": "oil-regions-profitability-thumb.png",
+        "image": "oil-regions-profitability-thumb.webp",
         "link": "https://github.com/Nathaniel-Stokes35/portfolio/blob/main/projects/TripleTen/oil_well_location_optimization.ipynb"
     }
 ]

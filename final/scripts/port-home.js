@@ -8,7 +8,7 @@ function handlePages(pages) {
         const card = document.createElement("div");
         card.classList.add("page-card");
         card.innerHTML = `
-            <img src="images/${page.image}" alt="${page.name} image" class="spot-img" loading="lazy">
+            <img src="${page.image}" alt="${page.name} image" class="spot-img" loading="lazy">
             <h3>${page.name}</h3>
             <p class="title">${page.title}</p>
             <p class="description">${page.description}</p>

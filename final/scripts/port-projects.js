@@ -25,7 +25,9 @@ function handleProjects(projects) {
         card.classList.add("page-card");
 
         card.innerHTML = `
-            <img src="images/${project.image}" alt="${project.title} thumbnail" class="spot-img" loading="lazy">
+            <div class="thumb-wrapper">
+                <img src="images/${project.image}" alt="${project.title} thumbnail" class="thumbnail" loading="lazy">
+            </div>
             <h3>${project.title}</h3>
             <p class="description">${project.description}</p>
             <p class="score"><strong>${project.score || ''}</strong></p>
