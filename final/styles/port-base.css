@@ -129,13 +129,13 @@ header {
 }
 
 .modal {
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 100;
-  transition: opacity 0.3s ease;
+    position: absolute;
+    top: 75vh;
+    left: 10vw;
+    width: 100%;
+    height: auto;
+    overflow-y: auto;
+    z-index: 100;
 }
 
 .modal[hidden] {

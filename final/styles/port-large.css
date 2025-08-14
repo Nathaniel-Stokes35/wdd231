@@ -32,6 +32,15 @@
         box-sizing: border-box;
         text-decoration: none;
     }
+    .modal {
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+        transition: opacity 0.3s ease;
+    }
     ul.skills {
         grid-template-areas:
         "job1 job2 job3 job4"
